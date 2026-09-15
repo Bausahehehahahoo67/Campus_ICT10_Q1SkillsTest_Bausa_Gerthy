@@ -20,9 +20,9 @@ def create_order(e):
     macchiato = document.getElementById('Macchiato')
     macchiatoprice = float(macchiato.value) * macchiato.checked
 
-    subtotal = coffeeprice + icedmiloprice + milkprice + mochaprice + macchiatoprice
-    vat = subtotal * 0.12
-    total = vat + subtotal
+    subtotal = coffeeprice + icedmiloprice + milkprice + mochaprice + macchiatoprice #it is a combination of all, because the code will be read on the basis of the checked boxes, so if coffee is checked but the rest arent, only coffee's price would be inputted
+    vat = subtotal * 0.12 #12% = 0.12, multiply to get the tax added
+    total = vat + subtotal # adds vat and subtotal
 
 
     Sub = f"Subtotal: ₱{subtotal:.2f}"
