@@ -5,30 +5,30 @@ def create_order(e):
     document.getElementById("VAT TAX").innerHTML = ""
     document.getElementById("Total Amount").innerHTML = ""
 
-    item1 = document.getElementById('Coffee')
-    price1 = float(item1.value) * item1.checked
+    coffee = document.getElementById('Coffee')
+    coffeeprice = float(coffee.value) * coffee.checked
 
-    item2 = document.getElementById('Iced Milo')
-    price2 = float(item2.value) * item2.checked
+    icedmilo = document.getElementById('Iced Milo')
+    icedmiloprice = float(icedmilo.value) * icedmilo.checked
 
-    item3 = document.getElementById('Milk')
-    price3 = float(item3.value) * item3.checked
+    milk = document.getElementById('Milk')
+    milkprice = float(milk.value) * milk.checked
 
-    item4 = document.getElementById('Mocha')
-    price4 = float(item4.value) * item4.checked
+    mocha = document.getElementById('Mocha')
+    mochaprice = float(mocha.value) * mocha.checked
 
-    item5 = document.getElementById('Macchiato')
-    price5 = float(item5.value) * item5.checked
+    macchiato = document.getElementById('Macchiato')
+    macchiatoprice = float(macchiato.value) * macchiato.checked
 
-    subtotal = price1 + price2 + price3 + price4 + price5
-    tax = subtotal * 0.12
-    total = tax + subtotal
+    subtotal = coffeeprice + icedmiloprice + milkprice + mochaprice + macchiatoprice
+    vat = subtotal * 0.12
+    total = vat + subtotal
 
 
     Sub = f"Subtotal: ₱{subtotal:.2f}"
     display(Sub, target = "Subtotal")
 
-    Vat = f"Tax: ₱{tax:.2f}"
+    Vat = f"VAT: ₱{vat:.2f}"
     display(Vat, target = "VAT TAX")
 
     Total = f"Total: ₱{total:.2f}"
