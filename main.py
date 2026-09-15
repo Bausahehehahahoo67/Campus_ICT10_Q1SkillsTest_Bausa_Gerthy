@@ -5,7 +5,7 @@ def create_order(e):
     document.getElementById("VAT TAX").innerHTML = ""
     document.getElementById("Total Amount").innerHTML = ""
 
-    coffee = document.getElementById('Coffee')
+    coffee = document.getElementById('Coffee') #
     coffeeprice = float(coffee.value) * coffee.checked
 
     icedmilo = document.getElementById('Iced Milo')
@@ -22,11 +22,11 @@ def create_order(e):
 
     subtotal = coffeeprice + icedmiloprice + milkprice + mochaprice + macchiatoprice #it is a combination of all, because the code will be read on the basis of the checked boxes, so if coffee is checked but the rest arent, only coffee's price would be inputted
     vat = subtotal * 0.12 #12% = 0.12, multiply to get the tax added
-    total = vat + subtotal # adds vat and subtotal
+    total = vat + subtotal # adds vat (product) and subtotal (sum)
 
 
     Sub = f"Subtotal: ₱{subtotal:.2f}"
-    display(Sub, target = "Subtotal")
+    display(Sub, target = "Subtotal") #targets div "Subtotal" to display result. the same case for VAT and Total
 
     Vat = f"VAT: ₱{vat:.2f}"
     display(Vat, target = "VAT TAX")
