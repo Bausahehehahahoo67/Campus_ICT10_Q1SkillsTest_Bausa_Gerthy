@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 Practice 3</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+
+</head>
+<body>
+    <h1>Receipt Generator</h1>
+        <form action=""> 
+               <input type="checkbox" id="Coffee" value="50">
+               <label for="Coffee" id="label1">Coffee</label>
+
+               <input type="checkbox" id="Iced Milo" value="65">
+               <label for="Iced Milo" id="label2">Iced Milo</label>
+
+               <input type="checkbox" id="Milk" value="30">
+               <label for="Milk" id="label3">Milk</label>
+
+               <input type="checkbox" id="Mocha" value="70">
+               <label for="Mocha" id="label4">Mocha</label>
+         <br>
+         <button type="button" py-click="create_order">Order</button>
+        </form>
+    
+    <div id="Subtotal"></div>    
+    <div id="VAT TAX"></div>
+    <div id="Total Amount"></div>
+    <script type="py" src="main.py"></script>
+
+</body>
+</html>
