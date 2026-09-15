@@ -7,7 +7,7 @@ def create_order(e):
 
     coffee = document.getElementById('Coffee') 
     coffeeprice = float(coffee.value) * coffee.checked
-
+    
     icedmilo = document.getElementById('Iced Milo')
     icedmiloprice = float(icedmilo.value) * icedmilo.checked
 
